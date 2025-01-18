@@ -1,0 +1,91 @@
+OOPS
+
+Encapsulation
+Inheritance
+Polymorphism
+
+Class: collection of state & behavior
+class is a keyword, using it we can define our own user defined datatypes.
+it is known as Template or bluprint of an object.
+class Syntax:
+[Modifier] <Class> <ClassName>
+{
+    Fields means variables
+    Methods means functions
+}; semicolon is optional
+
+class Example:
+class Student {
+    int studentNumber;
+    String studentName;
+}
+
+Reference variable:
+Reference variable Syntax:
+<ClassName> <referenceName>
+
+Reference variable Example:
+Student s;
+
+Object: Instance of a class
+Object Syntax:
+<reference name> = new <ClassName>([List of args]);
+
+Object Example:
+s = new Student();
+
+Constructor:
+Here Student() means constructor.
+constructor is an initializer method user for object instansiation and object initialisation.
+
+stack|#code
+holds the ref and hashcode-> memory is alocated for non static Fields
+for methods memory is not allocated within this object
+for every onject JVM created unique identity called #code or hcode.
+
+Instance Fields can be accessed by using the object reference in static context in the same class.
+// Instance Fields can be accessed by using the object reference in static context in the same class.
+public class Main
+{
+    int x =11; //instance fields
+    float y =2.5f;//static - within the same class and static context
+    
+	public static void main(String[] args) {
+		Main t = new Main();
+        System.out.println("x value is:"+t.x);
+         System.out.println("y value is:"+t.y);
+	}
+}
+
+Instance Fields can be accessed by using the object reference in both static or not static context in the other class.
+
+class Test{
+    int x =11; \\instance fields
+    float y = 0.2;\\not static context since these variales are in other class
+}
+class Test1{
+    public static void main(String args[]){
+        Test t = new Test();
+        System.out.println("x value is:"+t.x);
+         System.out.println("y value is:"+t.y);
+    }
+}
+
+System.out.println()
+
+Println() is a method used to print the satatements.
+println is present in Printstream class. 
+Inorder to call println we create an object reference "out" of static type in System class.
+Since out is a static object reference, we can use classname to access it. 
+Therefore System is a class, out is a static object reference of Printstream class to access println menthod in it.
+
+Since out is a static object reference, we can either use classname to access it or use an object reference.
+ since the constructor is private in System class it won't allow to create an object reference. 
+ so, the only way to access the obj ref is using class name 
+
+
+println is a methodout which is present in printstream class. 
+we can access println method using an obj ref called out of static type.
+since out is static type it can be used using class name to access it.
+out is present in sysytem class.
+System is a class, out is static obj referebnce and println is a method.
