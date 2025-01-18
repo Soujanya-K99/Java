@@ -89,3 +89,28 @@ we can access println method using an obj ref called out of static type.
 since out is static type it can be used using class name to access it.
 out is present in sysytem class.
 System is a class, out is static obj referebnce and println is a method.
+
+Formal parameters Vs Actual arguments
+ the diff between them is they both are stored in diff memory. 
+ actual is stored in object in heap memory.
+ formal is stored in stack memory where the entire method memory is stored.
+
+actual arguments are the original values that we pass by the calling method.
+int total = a.sum(10,20); // actual arguments here are 10,20 the original values. a is obj ref
+
+formal parameters are the copies of the actual arguments.
+formal parameters are the local variables in the called method.
+int sum(int x,int y){
+    sum = x+y;
+    return sum;
+}
+
+Instance methods:
+ methods defined in a class without static modifier are called instance methods.
+ Every instance method must be referenced by an object reference in the static context of same class.
+ Every instance method must be referenced by an object reference either static or non static context outside of the class.
+
+3 types:
+mutable methods = changes the values of the fields =>setter method
+immutable methods = doesn't change the state (values) of the fields =>getter method (reads the values)
+initializer methods = used to instansiating and initializing the object => constructor

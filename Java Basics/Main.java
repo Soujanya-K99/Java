@@ -14,7 +14,13 @@ class Test{
     float y =2.5f; //non static context and other class
 }
 
+//output:
+// Hello World
+// x value is:11
+// y value is:2.5
+*/
 
+/* 
 // Instance Fields can be accessed by using the object reference in static context in the same class.
 public class Main
 {
@@ -24,12 +30,16 @@ public class Main
 	public static void main(String[] args) {
 		Main t = new Main();
         System.out.println("x value is:"+t.x);
-         System.out.println("y value is:"+t.y);
+        System.out.println("y value is:"+t.y);
 	}
 }
     
+// output:
+// x value is:11
+// y value is:2.5
+*/
 
-
+/* printStream
 import java.io.PrintStream;
 
 public class Main {
@@ -39,9 +49,10 @@ public class Main {
         p.println("This is a main method printing from PrintStream class");
     }
 }
-
-
-//formal parameters and actual arguments
+//output:This is a main method printing from PrintStream class
+*/
+/*
+//formal parameters and actual arguments (addition program)
 public class Main
 {
 	public static void main(String[] args) {
@@ -56,4 +67,50 @@ public class Main
         }
 }
 
+//output:30
+*/
+
+/*// formal parameters and actual arguments (sum of square root program)
+public class Main
+{
+	public static void main(String[] args) {
+        Main m= new Main(); //constructor
+        int total =m.sqrt(4,5); //calling method
+        System.out.println(total);
+    }
+
+    int sqrt(int a, int b){ //called method
+         return (a*a)+(b*b);
+    }
+}
+// output: 41
+*/
+/*
+// Instance methods
+public class Main
+{
+    int x,y;
+	public static void main(String[] args) {
+        Main m= new Main();//constructor /initializer method
+        m.setData(10,20); //setter method /mutable
+        m.getData();//getter method /immutable
+       
+    }
+
+    void setData(int a,int b){
+        x=a;
+        y=b;     
+    }
+
+    void getData(){
+       if(x>y){
+        System.out.println("x is larger number:"+ x);
+       } 
+       else{
+        System.out.println("y is larger number:"+ y);
+       }
+    }
+}
+
+//output= y is larger number:20
 */
