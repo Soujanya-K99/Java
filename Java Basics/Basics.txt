@@ -115,4 +115,39 @@ mutable methods = changes the values of the fields =>setter method
 immutable methods = doesn't change the state (values) of the fields =>getter method (reads the values)
 initializer methods = used to instansiating and initializing the object => constructor
 
-//This keyword notes
+//This keyword
+this is an impliccit reference variable
+it is always holding current object
+it is used when both the local and instance fields are declared with same name inorder
+to make the differentitaion between them make use of this for instance fields
+
+this is not supported in static context. 
+It is supported only in non-static contex.
+
+//Static Modifier: it is a non-access modifier.
+with the help of it we can declare below
+variables(declare)
+define blocks
+define methods
+
+static variables: variables declared within class with static modifier outside of all methods
+memory is allocated in the static constant Pool.
+
+static fields:only one copy of memory is created,it can be shared by n number of objects of same type.
+they can referenced by either class name or obj ref when ever you want to access it from outside of class.
+
+static block: =>initial block or initializer block.
+these blocks are executed first before main method.
+thus, these blocks are called initial blocks.
+initialization means not only init but also resource allocation,n/w connections,database connection,opening of files.
+ they are executed only once in entire program execution process
+syntax:
+static{
+    statements;
+    -----------
+}
+static blocks are executed automatically whever the class is loaded into memory.
+System.exit(123); //exit is the static method of System class used to terminate the program execution.
+
+Static methods:methods defined within the class with static modifier
+to access it outside of class require obj ref or class name.
